@@ -3,12 +3,8 @@ date=$(date "+%Y-%m-%d-%H:%M:%S")
 cd in
 count=$(ls -1q *|wc -l)
 cd ..
-if [[ -a *.html ]]; then
-    rm *.html
-    else
-      mv *.html "backup/"
-      touch "$date.html"
-fi
+mv *.html "backup/"
+touch "$date.html"
 cd in
 for ((i=1;i<=$count;i++)) ; do
     :
