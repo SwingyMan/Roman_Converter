@@ -1,3 +1,5 @@
+import sys
+
 
 def convert(y):
     if y.isnumeric(): # arabska
@@ -47,7 +49,7 @@ def convert(y):
                     x -= 1
                     res.append("I")
             res = "".join(res)
-            return res
+            print(res)
     else:   #rzymska
         dict = {
             "I": 1,
@@ -126,6 +128,7 @@ def convert(y):
         if (flag == True):
             return "Zly zapis"
         else:
-            return result
-
+            print(result)
+if __name__ == "__main__":
+    convert(sys.argv[1])
 
