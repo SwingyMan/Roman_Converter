@@ -1,14 +1,14 @@
 #!/bin/bash
-set -x
-set -e
 date=$(date "+%Y-%m-%d-%H:%M:%S")
 cd in
 count=$(ls -1q *|wc -l)
 cd ..
-if [[ -e raport.html ]]; then
-    cp raport.html "backup/$date.html"
+if [[ -a *.html ]]; then
+    rm *.html
     else
-      touch raport.html
+      mv *.html "backup/"
+      rm *.html
+      touch "$date.html"
 fi
 cd in
 for ((i=1;i<=$count;i++)) ; do
@@ -22,4 +22,4 @@ for ((i=1;i<=$count;i++)) ; do
     cd in
 done
 cd ..
-python3 generate.py
+python3 generate.py "$date.html"

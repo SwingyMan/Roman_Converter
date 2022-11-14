@@ -1,4 +1,6 @@
 import os
+import sys
+
 from tabulate import tabulate
 import numpy
 os.chdir("out")
@@ -19,6 +21,6 @@ i=numpy.transpose(table)
 headers =("Input","Output")
 os.chdir("..")
 p = tabulate(i,headers, tablefmt='html')
-o = open("raport.html","w",encoding="utf-8")
+o = open(sys.argv[1],"w",encoding="utf-8")
 o.write(p)
 o.close()
