@@ -7,7 +7,6 @@ if [[ -a *.html ]]; then
     rm *.html
     else
       mv *.html "backup/"
-      rm *.html
       touch "$date.html"
 fi
 cd in
