@@ -27,7 +27,7 @@ while choice=$(dialog --title "Kalendarz Rzymski" --menu "Wybierz opcję" 12 45 
           cp -R in backup/$date/
           cp -R out backup/$date/
           dialog --title "Gotowe" --msgbox "Zadanie wykonane!" 6 20;;
-      3)  dialog --title "Gotowe" --msgbox "Projekt stworzony przez Marcina Bogus w językach Python i Bash.
+      3)  dialog --title "O autorze" --msgbox "Projekt stworzony przez Marcina Bogus w językach Python i Bash.
 Celem programu miała być dwustronna zamiana systemów cyfr rzymskich i arabskich." 12 80;;
       *) exit;;
   esac
