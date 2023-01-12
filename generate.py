@@ -1,6 +1,5 @@
 import os
 import sys
-
 from tabulate import tabulate
 import numpy
 os.chdir("out")
@@ -22,5 +21,7 @@ headers =("Input","Output")
 os.chdir("..")
 p = tabulate(i,headers, tablefmt='html')
 o = open(sys.argv[1],"w",encoding="utf-8")
+header = "<h1>Raport wygenerowano o: "+sys.argv[1].strip(".html")+"</h1>"
+o.write(header)
 o.write(p)
 o.close()
